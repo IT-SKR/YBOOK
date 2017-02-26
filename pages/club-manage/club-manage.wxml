@@ -1,0 +1,59 @@
+<view class="page">
+  <view class="page__bd ">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-grids">
+        <block wx:for-items="{{members}}" wx:key="{{index}}">
+          <navigator url="/pages/user/user?user_id={{item.user.id}}" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="{{item.user.avatar}}" />
+            <view class="weui-grid__label">{{item.user.name}}</view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+    <view bindtap="toEdit" class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <text>名称</text>
+        </view>
+        <view class="weui-cell__ft">{{clubInfo.club_name}}</view>
+      </view>
+      <view class="weui-media-box weui-media-box_text">
+        <text class="weui-media-box__title">描述</text>
+        <text class="weui-media-box__desc">{{clubInfo.description}}</text>
+      </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+      <view class="icon-box">
+        <icon type="info" size="60"></icon>
+        <view class="icon-box__ctn">
+          <view class="icon-box__title">提示</view>
+          <view class="icon-box__desc">分享此页面可以添加成员</view>
+        </view>
+      </view>
+    </view>
+
+    <!--<view class="weui-panel weui-panel_access">
+      <view bindtap="toClubQRCode"  class="weui-cell weui-cell_access " hover-class="weui-cell_active ">
+        <view class="weui-cell__hd ">
+          <image src="/images/qrcode.png " />
+        </view>
+        <view class="weui-cell__bd weui-cell_primary ">
+          <view>团体码（分享以添加成员）</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access "></view>
+      </view>
+    </view>-->
+
+    <!--<view class="weui-cells">
+      <view bindtap="toClubQRCode" class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd weui-cell_primary">
+          <text>团体码（分享以添加成员）</text>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>-->
+  </view>
+  <view class="page__ft page__bd_spacing">
+    <button bindtap="quitclub" class="weui-btn" type="primary">退出小团体</button>
+  </view>
+</view>

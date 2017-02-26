@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/discover/discover",
+    "pages/welcome/welcome",
+    "pages/logs/logs",
+    "pages/create-club/create-club",
+    "pages/club-homepage/club-homepage",
+    "pages/club-manage/club-manage",
+    "pages/club/join/join",
+    "pages/club/shelf/shelf",
+    "pages/club/share/share",
+    "pages/share/share",
+    "pages/user/user",
+    "pages/user/friends/friends",
+    "pages/user/shelf/shelf",
+    "pages/user/user-qrcode/user-qrcode",
+    "pages/edit-club/edit-club",
+    "pages/club-qrcode/club-qrcode",
+    "pages/book/book",
+    "pages/book/book-qrcode/book-qrcode",
+    "pages/book/book-hire/book-hire",
+    "pages/scan-center/scan-center",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "YBook",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#09BB07",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/1178088-1.png",
+        "selectedIconPath": "images/1178088-2.png",
+        "text": "书架"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "iconPath": "images/dis-black.png",
+        "selectedIconPath": "images/dis-green.png",
+        "text": "发现"
+      }
+    ]
+  }
+}

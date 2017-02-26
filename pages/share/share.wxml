@@ -1,0 +1,18 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.user_avatar}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.user_name}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+<view wx:if="{{target_user_id!=''}}">
+  <button bindtap="orderYou" class="weui-btn navbar-fixed-bottom" type="primary">订阅他的读书信息</button>
+</view>
+
+<view class="bottom-text" wx:if="{{target_user_id ==''}}">
+分享此页面完成邀请
+</view>

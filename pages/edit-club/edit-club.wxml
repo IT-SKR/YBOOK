@@ -1,0 +1,29 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{err}}</view>
+
+        <view class="weui-cells__title">小团体名称</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input bindinput="inputName"  class="weui-input" placeholder="取个名字" value="{{clubName}}"/>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">描述</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea value="{{clubDescription}}"   bindinput="inputDescription"  placeholder="描述一下" style="height: 3.3em" maxlength="200" />
+                    <view class="weui-textarea-counter">{{desclenght}}/200</view>
+                </view>
+                
+            </view>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+        </view>
+    </view>
+</view>

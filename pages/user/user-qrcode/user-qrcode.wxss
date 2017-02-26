@@ -1,0 +1,19 @@
+.qr-holder{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.qrcode-max{
+    width: 600rpx;
+    height: 600rpx;
+}
+
+.weui-media-box__hd_in-appmsg {
+margin-right:.8em;
+width:100rpx;
+height:100rpx;
+line-height:120rpx;
+text-align:center;
+}

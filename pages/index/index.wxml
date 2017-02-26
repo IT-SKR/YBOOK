@@ -1,0 +1,56 @@
+<!--<include src="../../template/searchbar/searchbar-template.wxml" />-->
+<view class="weui-panel weui-panel_access">
+  <view  class="weui-panel__bd">
+    <navigator url="/pages/user/user?user_id={{user_id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{userInfo.avatarUrl}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{userInfo.nickName}}</view>
+      </view>
+      <view class="weui-media-box__ft">
+      </view>
+    </navigator>
+  </view>
+  <view class="weui-grids">
+    <block wx:for-items="{{bookshelf}}" wx:key="{{index}}">
+      <navigator url="/pages/book/book?book_shelf_id={{item.book_shelf_id}}" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="{{item.book_image}}" />
+        <view style="visibility:{{item.book_status=='HOLD'?'hidden':'visible'}}" class="weui-grid-book-status__label">转出</view>
+        <view class="weui-grid__label">{{item.book_name}}</view>
+      </navigator>
+    </block>
+  </view>
+</view>
+<view class="weui-cells weui-cells_in-small-appmsg">
+  
+    <navigator url="/pages/user/friends/friends?user_id={{user_id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/user.png" style="width: 20px;height: 20px;margin-right: 5px" />
+      </view>
+      <view class="weui-cell__bd weui-cell_primary">
+        <view>相关读书人</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+</view>
+<view class="weui-cells weui-cells_in-small-appmsg">
+  <block wx:for-items="{{club_member}}" wx:key="{{index}}">
+    <navigator url="../club-homepage/club-homepage?club_id={{item.club.club_id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/1179221.png" style="width: 20px;height: 20px;margin-right: 5px" />
+      </view>
+      <view class="weui-cell__bd weui-cell_primary">
+        <view>{{item.club.club_name}}</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </block>
+</view>
+  <button class="weui-btn weui-btn_primary transfer-fixed-bottom" type="primary" bindtap="open">+</button>
+
+<!--<view bindtap="bindViewTap" class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>-->

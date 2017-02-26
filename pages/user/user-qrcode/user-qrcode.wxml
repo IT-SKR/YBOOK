@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{user.avatar}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{user.name}}</view>
+
+          <!--<view class="weui-media-box__desc">{{user.book_author}}</view>-->
+        </view>
+      </navigator>
+    </view>
+    <view class="weui-panel__bd">
+      <view class="qr-holder">
+        <image class="qrcode-max" src="{{user.qrcodeURL}}"></image>
+        <text>扫码可添加好友</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="bottom-text">
+分享此页面可添加好友
+</view>

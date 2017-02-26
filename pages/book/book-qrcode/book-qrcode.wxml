@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{book.book_image}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book.book_name}}</view>
+          <view class="weui-media-box__desc">{{book.book_author}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="weui-panel__ft">
+      <view class="qr-holder">
+        <image class="qrcode-max" src="{{imgURL}}"></image>
+        <text>扫码可以交换</text>
+      </view>
+    </view>
+  </view>
+  <button bindtap="toPrint" class="weui-btn mini-btn" type="default" size="mini">打印二维码</button>
+</view>
+<view class="bottom-text">
+  YBook共享读书的好帮手
+</view>

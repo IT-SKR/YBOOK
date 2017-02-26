@@ -1,0 +1,53 @@
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+page{
+  background-color:#fff;
+}
+
+.border-out{
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  border:1rpx solid #0096e4;
+}
+
+.t-top{
+  font-size: 14px;
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+}
+.t-holder{
+  width: 100%;
+  margin-bottom: 30rpx;
+  text-align: center;
+  font-size: 28px;
+}
+
+.jiaobiao{
+  position: fixed;
+  bottom: 50rpx;
+  right: 50rpx;
+  width: 36px;
+  height: 27px;
+}

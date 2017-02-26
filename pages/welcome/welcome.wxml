@@ -1,0 +1,25 @@
+
+<!--<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>-->
+  <view id="qr" class="border-out">
+    <text class="t-top"> 扫书码 </text>
+    <view style="margin-top:300rpx;width:100%;">
+      <view class="t-holder">
+        <text> 录入 </text>
+      </view>
+      <view class="t-holder">
+        <text> 借阅 </text>
+      </view>
+      <view class="t-holder">
+        <text> 归还 </text>
+      </view>
+    </view>
+    <image class="jiaobiao" src="/images/qrcode.png"></image>
+  </view>

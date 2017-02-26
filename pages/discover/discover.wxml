@@ -1,0 +1,71 @@
+<!--<view style="margin-top:10px;"></view>
+<view class="weui-panel weui-panel_access">
+  <view class="weui-cells weui-cells_in-small-appmsg">
+    <navigator url="/pages/user/friends/friends?user_id={{user_id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/user.png" style="width: 20px;height: 20px;margin-right: 5px" />
+      </view>
+      <view class="weui-cell__bd weui-cell_primary">
+        <view>相关读书人</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  <view class="weui-cells weui-cells_in-small-appmsg">
+    <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/1179221.png" style="width: 20px;height: 20px;margin-right: 5px" />
+      </view>
+      <view class="weui-cell__bd weui-cell_primary">
+        <view>小团体</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+<view class="weui-panel weui-panel_access">
+  <view class="weui-cells weui-cells_in-small-appmsg">
+    <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/1179221.png" style="width: 20px;height: 20px;margin-right: 5px" />
+      </view>
+      <view class="weui-cell__bd weui-cell_primary">
+        <view>小团体</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>-->
+<block wx:if="{{discover.book_shelf.length!=0}}">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+      <block wx:for-items="{{discover.book_shelf}}" wx:key="{{index}}">
+        <navigator url="../book/book?book_shelf_id={{item.book_shelf_id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="{{item.book_image}}" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{item.book_name+'('+item.douban_average+')'}}</view>
+            <view class="weui-media-box__desc">{{item.book_author}}</view>
+          </view>
+        </navigator>
+        <text bindtap="toBookDetail" data-reUrl="../book/book?book_shelf_id={{item.book_shelf_id}}" class="weui-article">
+          {{item.book_summary}}
+        </text>
+      </block>
+    </view>
+  </view>
+</block>
+<block wx:if="{{discover.book_shelf.length==0}}">
+
+  <!--index.wxml-->
+  <view class="container">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{user_avatar}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{user_name}}</text>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto">发现从邀请朋友使用开始</text>
+    </view>
+  </view>
+</block>
